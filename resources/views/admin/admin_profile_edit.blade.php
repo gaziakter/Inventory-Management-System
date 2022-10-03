@@ -49,7 +49,7 @@
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <img id="show_picture" src="{{asset('assets/images/users/avatar-5.jpg')}}" alt="avatar-5" class="rounded avatar-lg">
+                                    <img id="show_picture" src="{{(!empty($editData->profile_picture))? url('upload/images/'.$editData->profile_picture):url('upload/no_image.png')}}" alt="avatar-5" class="rounded avatar-lg">
                                 </div>
                             </div>
                             <!-- end row -->
