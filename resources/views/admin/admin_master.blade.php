@@ -121,6 +121,12 @@
         }
         @endif 
         </script>
+
+        <!--tinymce js-->
+        <script src="{{asset('assets/libs/tinymce/tinymce.min.js')}}"></script>
+
+        <!-- init js -->
+        <script src="{{asset('assets/js/pages/form-editor.init.js')}}"></script>        
     </body>
 
 </html>
