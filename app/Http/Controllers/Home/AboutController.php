@@ -87,7 +87,7 @@ class AboutController extends Controller
                 'multi_image' => $save_url,
                 'created_at' => Carbon::now()
             ]);             
-        }
+        } //end of the foreach
     
         $notification = array(
         'message' => 'Multi Image Inserted Successfully', 
@@ -97,4 +97,9 @@ class AboutController extends Controller
         return redirect()->back()->with($notification);
 
     }
+
+    public function AllMultiImage(){
+        $allMultiImage = MultiImage::all();
+        return view('admin.about_page.all_multiimage', compact('allMultiImage'));
+    } // end function AllMultiImage
 }
