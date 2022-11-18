@@ -29,7 +29,6 @@
                         <li><a href="{{route('about.page')}}">About Page</a></li>
                         <li><a href="{{route('about.multi.image')}}">About Multi Image</a></li>
                         <li><a href="{{route('all.multi.image')}}">All Multi Image</a></li>
-
                     </ul>
                 </li>
                 <li>
@@ -40,6 +39,16 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('add.portfolio')}}">Add Portfolio</a></li>
                         <li><a href="{{route('all.portfolio')}}">All Portfolio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Blog Category Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="">Add Blog Category</a></li>
+                        <li><a href="{{route('all.blog.category')}}">All Blog Category</a></li>
                     </ul>
                 </li>
 
