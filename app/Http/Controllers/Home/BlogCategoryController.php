@@ -54,6 +54,7 @@ class BlogCategoryController extends Controller
 
         BlogCategory::findOrFail($BlogCategoryId)->update([
                 'blog_category' => $request->blog_category,
+
             ]); 
             $notification = array(
             'message' => 'Updated blog Category Successfully', 
@@ -63,6 +64,19 @@ class BlogCategoryController extends Controller
         return redirect()->route('all.blog.category')->with($notification);
 
      } // End Method 
+
+
+     public function DeleteBlogCategory($id){
+      
+        BlogCategory::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Blog Category Deleted Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+    }
 
 
 }
