@@ -121,5 +121,12 @@ class BlogController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    public function BlogDetails($id){
+
+        $AllBlog = Blog::latest()->limit(5)->get();
+        $blog = Blog::findOrFail($id);
+        return view('frontend.blog_details', compact('blog', 'AllBlog'));
+    }
+
 
 }

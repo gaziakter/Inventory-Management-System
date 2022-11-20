@@ -1,5 +1,5 @@
 @php
-    $blogs = App\Models\Blog::latest()->get();
+    $blogs = App\Models\Blog::latest()->limit(3)->get();
 @endphp
 
 <section class="blog">
@@ -17,7 +17,7 @@
                         <div class="blog__post__content">
                             <span class="date">{{Carbon\Carbon::parse($item->created_at)->diffForHumans()}}</span>
                             <h3 class="title"><a href="blog-details.html">{{$item->blog_title}}</a></h3>
-                            <a href="blog-details.html" class="read__more">Read mORe</a>
+                            <a href="{{route('blog.detais', $item->id)}}" class="read__more">Read mORe</a>
                         </div>
                     </div>
                 </div>
