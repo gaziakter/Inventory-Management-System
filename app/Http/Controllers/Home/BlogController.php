@@ -137,5 +137,12 @@ class BlogController extends Controller
         return view('frontend.cat_blog_details', compact('BlogPost', 'AllBlog', 'categories', 'CategoryTitle'));
     }
 
+    public function BlogPage(){
+        $BlogPost = Blog::latest()->limit(5)->get();
+        $AllBlog = Blog::latest()->limit(5)->get();
+        $categories = BlogCategory::orderBy('blog_category', 'ASC')->get();
+        return view('frontend.blog_page', compact('BlogPost', 'AllBlog', 'categories'));
+    }
+
 
 }

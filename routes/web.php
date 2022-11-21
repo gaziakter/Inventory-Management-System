@@ -86,6 +86,7 @@ Route::controller(BlogController::class)->group(function(){
     Route::get('/delete/blog/{id}', 'DeleteBlog')->name('delete.blog');
     Route::get('/details/blog/{id}', 'BlogDetails')->name('blog.detais');
     Route::get('/category/blog/{id}', 'CategoryBlog')->name('category.blog');
+    Route::get('/blog', 'BlogPage')->name('blog.page');
 });
 
 
