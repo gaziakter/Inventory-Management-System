@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
+use App\Http\Controllers\Home\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,11 +91,16 @@ Route::controller(BlogController::class)->group(function(){
     Route::get('/blog', 'BlogPage')->name('blog.page');
 });
 
-
 // Footer all route
 Route::controller(FooterController::class)->group(function(){
     Route::get('/all/footer', 'FooterAll')->name('footer.all');
     Route::post('/update/footer/', 'UpdateFooter')->name('update.footer');
+});
+
+// Contact all route
+Route::controller(ContactController::class)->group(function(){
+    Route::get('/contact', 'ContactMe')->name('contact.me');
+    Route::post('/message', 'StoreMessage')->name('store.message');
 });
 
 
