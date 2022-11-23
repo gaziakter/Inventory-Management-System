@@ -101,8 +101,10 @@ Route::controller(FooterController::class)->group(function(){
 Route::controller(ContactController::class)->group(function(){
     Route::get('/contact', 'ContactMe')->name('contact.me');
     Route::post('/message', 'StoreMessage')->name('store.message');
+    Route::get('/all/message', 'AllMessage')->name('all.message');
+    Route::get('/show/message/{id}', 'ShowMessage')->name('show.message');
+    Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
 });
-
 
 Route::get('/dashboard', function () {
     return view('admin.index');
