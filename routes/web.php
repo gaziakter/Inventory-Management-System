@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
@@ -21,11 +22,10 @@ use App\Http\Controllers\Home\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
+// Home all route
+Route::controller(DemoController::class)->group(function(){
+    Route::get('/', 'homePageFunction')->name('home.page');
 });
-
-
 
 // Admin all route
 Route::controller(AdminController::class)->group(function(){

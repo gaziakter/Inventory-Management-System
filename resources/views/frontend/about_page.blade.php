@@ -1,5 +1,8 @@
 @extends('frontend.main_master')
 @section('main')
+@section('title')
+About | Inventory Management System
+@endsection
         <!-- main-area -->
         <main>
             <!-- breadcrumb-area -->
