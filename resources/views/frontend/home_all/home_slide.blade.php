@@ -1,5 +1,5 @@
 @php 
-    $homeslide = App\Models\Homeslide::find(1);
+    $homeslide = App\Models\HomeSlide::find(1);
 @endphp
 <section class="banner">
     <div class="container custom-container">

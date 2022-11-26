@@ -53,7 +53,7 @@
             <div class="dropdown d-inline-block user-dropdown">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{(!empty($adminData->profile_picture))? url('upload/images/'.$adminData->profile_picture):url('upload/no_image.png')}}"
+                    <img class="rounded-circle header-profile-user" src="{{(!empty($adminData->profile_picture))? url('upload/admin_images/'.$adminData->profile_picture):url('upload/no_image.png')}}"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1">{{$adminData->name}}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>

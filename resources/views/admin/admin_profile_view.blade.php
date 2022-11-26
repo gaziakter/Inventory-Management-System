@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="card">
-                    <img class="card-img-top img-fluid" src="{{(!empty($adminData->profile_picture))? url('upload/images/'.$adminData->profile_picture):url('upload/no_image.png')}}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{{(!empty($adminData->profile_picture))? url('upload/admin_images/'.$adminData->profile_picture):url('upload/no_image.png')}}" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Name : {{$adminData->name}}</h4>
                         <hr>
